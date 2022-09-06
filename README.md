@@ -7,7 +7,7 @@
 
 # Objectives
 
-- We made a workout trcking app.
+- We made a workout tracking app.
 
 ---
 
