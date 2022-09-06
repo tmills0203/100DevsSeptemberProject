@@ -12,7 +12,7 @@
 
 # Who is this for?
 
-- Anyone who wants to use it I guess
+- Anyone who could benefit!
 
 ---
 
@@ -45,5 +45,6 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 # Contributors
 
 - Theresa Mills
+- Daniel Becker
 
 Have fun!
