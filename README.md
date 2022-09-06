@@ -20,6 +20,8 @@
 
 - This is currently hosted on glitch, for free, so some of the stuff is gonna run really slow. Download a copy and set it up to run on localhost and it sings!
 
+-- Add as a contributor 
+
 ---
 
 # Packages/Dependencies used
