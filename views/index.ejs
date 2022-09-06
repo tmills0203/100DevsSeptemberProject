@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Create Your VERY OWN Todolist!</h1>
-    <a href="/login"> Login</a>
-    <a href="/signup"> Signup</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Tracker</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/cookieBanner.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--  Google Fonts - Work Sans -->
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- End Google Fonts -->
+  </head>
+  <body>
+    <section id="bodySection" style='display: block'>
+      <div id="glowStick" class="card card-body" style="justify-content: center;">
+        <h1 id="zazz">Workout Tracker</h1>
+        <div class="index-section">
+          <div id="login-signUp">
+            <a class="login right-item" href="/login" style="box-shadow: 0px 0px 20px #000;">Login</a>
+            <a class="signup" href="/signup" style="box-shadow: 0px 0px 18px #000;">Signup</a>
+          </div>
+          <!-- <button class='cookieButton' id="revokeCookiePerms">Revoke Cookie Permissions</button> -->
+          <%- include('./partials/revokeCookiePerms.ejs') %>
+
+        </div>
+      </div>
+        <!-- <a 
+<button onclick ="workoutFunction()">This site uses cookies. To continue using this site, please click below to choose to accept or decline cookies to continue using this service.
+<form name="myform" method="POST" onsubmit="onSubmit()";>
+                 <input type="submit" name="accept" id="accept" value="Accept" onclick="acceptFunction()">
+<input type="submit" name="decline" id="decline" value="Decline" onclick="rejectFunction()">
+</form>
+</button>
+</a> -->
+    </section>
+<!-- 
+   
+    I added this as a partial so it can be reused as needed, along with the section above to hide content behind banner, and a button to revoke cookie permissions; I also added a seperate cookie banner js and css file. It controls the fade in/out for elements.
+
+    We still need to actually make a cookie policy and link the 'a' tag in the banner to it (in ./views/partials/cookieBanner.ejs)
+-->
+    <%- include('./partials/cookieBanner.ejs') %>
+  </body>
 </html>

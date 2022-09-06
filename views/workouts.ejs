@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workouts</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+ 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="bodySection" class='outer' style='display: block'>
+      <div id="glowStick" class="card card-body" style="justify-content: center;">
+      <h1 id="zazz">Workout Tracker</h1>
+      <% let complete = 0 %>
+      <% let partial = 0 %>
+      <% let incomplete = 0 %>
+      <% workouts.forEach ( el => { %>
+        <% if ( el.status === 'completed') { %>
+          <% complete++ %>
+          <%} else if (el.status === 'partialCompleted') {%>
+          <% partial++ %>
+          <%} else if(el.status === 'notCompleted') {%>
+          <% incomplete++ %>
+        <%}%>
+      <% })%>
+      <% const pointCount = complete + partial / 2 %>
+      <h2><%= user.userName %> has <%= pointCount %> points earned.</h2>
+
+
+      <ul id="zazz2">
+        <% workouts.forEach( el => { %>
+        <li class='window <%=`${el.status}`%>' data-id="<%= el._id %>">
+          <div class="workoutItems innerWindow <%=`${el.status}`%>" data-id="<%= el._id %>">
+            <p class="normalText"><span>Workout: </span><%= el.workout %></p>
+            <p class=<%=`rainbowText statusBox ${el.status}`%>> <span><%= el.status === 'completed' ? 'Complete' : el.status === 'partialCompleted' ? 'Partially Complete' : 'Incomplete' %></span></p>
+            <p class="normalText"><span>Reps: </span><%= el.reps %></p>
+            <p class="normalText"><span>Created: </span><%= el.createdAt.toLocaleDateString('en-US', {year: 'numeric', month: '2-digit', day: '2-digit', }) %></p>
+          </div>
+          <span class="del rainbowText"><i class="fa-solid fa-trash-can"></i></span>
+        </li>
+        <% }) %>
+      </ul>
+
+      <form id="addWorkout" action="/workouts/createWorkout" onSubmit='validateFields();' method="POST">
+        <input id="workoutNameInput" type="text" placeholder="Workout" name="workoutItems" onchange="validateInput();" />
+        <input id="repsAmountInput" type="text" placeholder="Reps" name="reps" onchange="validateInput();"/>
+        <div class="row">
+          <div class="input-field">
+            <select id="status" name="status">
+              <option value="notCompleted" selected>not completed</option>
+              <option value="partialCompleted">partial completed</option>
+              <option value="completed">completed</option>
+            </select>
+            <label class="normalText" for="status">Status</label>
+          </div>
+        </div>
+        <input class='cookieButton' id='submitWorkout' type="submit" style="display: none;" onclick = 'submitButtonClick(event)'/>
+      </form>
+
+      <div id="logout-revoke">
+        <!-- <a class="logoutButton" id="logout-Button" href="/logout">Logout</a> -->
+        <%- include('./partials/logoutButton.ejs') %>
+        <%- include('./partials/revokeCookiePerms.ejs') %>
+      </div>
+      
+
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+      <script src="js/main.js"></script>
+      <script>
+        M.FormSelect.init(document.querySelector("#status"));
+      </script>
+    </div>
+    </section>
+    <%- include('./partials/cookieBanner.ejs') %>
+  </body>
+</html>
+
+
+      
+
+  

@@ -1,0 +1,48 @@
+body {
+    margin: 32px;
+  }
+  /* Typography */
+  h1 {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    color: #2d3047;
+  }
+  h2 {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .underline {
+    border-bottom: 2px solid #2d3047;
+  }
+
+  /* Glass card effect */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: 'Beach.png';
+  /* background-color: rgb(231, 221, 172); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.card {
+  padding: 5%;
+  box-shadow: 0 0 5px 0 ;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  /* <!--margin: 100px; according to your need--> */
+}
+
+/* general stuff */
+.container {
+  /* display: flex; */
+  width: 50%;
+}

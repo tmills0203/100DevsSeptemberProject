@@ -1,10 +1,313 @@
-h1{
-    color: red;
+body {
+  margin: 32px;
+  /* background: url('../images/pexels-photo-3308588.webp'); */
+  background-color:  rgba(12, 12, 12, 0.95);;
 }
+/* Typography */
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  text-align: center;
+  color: #2d3047;
+}
+h2 {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+}
+.underline {
+  border-bottom: 2px solid #2d3047;
+}
+.workout-summary {
+  background: rgba(255, 253, 130, 0.1);
+  padding: 32px;
+}
+
+/* Layout */
+.index-section{
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+input {
+  background: rgba(255, 253, 130, 0.1);
+  border: 1px solid rgba(45, 48, 71, 0.75);
+  border-radius: 4px;
+  padding: 16px;
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: rgba(45, 48, 71, 0.75);
+}
+/* Button Styling */
+.login,
+.signup,
+.submit,
+#revokeCookiePerms,
+.cookieButton,
+#grantCookiePermissions,
+#logoutButton{
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 24px;
+  text-decoration: none;
+}
+.login,
+.submit {
+  color: #2d3047;
+  background-color: #fffd82;
+  border: 1px solid #2d3047;
+}
+.login:hover,
+.submit:hover,
+#revokeCookiePerms:hover,
+.cookieButton:hover,
+.cookieButton2,
+#grantCookiePermissions:hover,
+#logoutButton,
+#home {
+  background-color: #2d3047;
+  color: #fffd82;
+}
+.signup,
+#revokeCookiePerms {
+  color: #fffd82;
+  background-color: #2d3047;
+  border: 1px solid #2d3047;
+}
+.signup:hover,
+#revokeCookiePerms,
+.cookieButton,
+.cookieButton2:hover,
+#logoutButton:hover,
+#home:hover{
+  background-color: #fffd82;
+  color: #2d3047;
+}
+
+/* Alerts */
+.alert {
+  background: rgba(232, 72, 85, 0.1);
+  padding: 24px;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: #e84855;
+}
+
+/* Old CSS */
 .completed{
-    text-decoration: line-through;
-    color: gray;
+  /* text-decoration: line-through; */
+  color: green;
+  padding: 2%;
+  border: 5px solid green;
 }
-.not{
-    text-decoration: underline;
+.notCompleted{
+  /* text-decoration: underline; */
+  color: red;
+  padding: 2%;
+  border: 5px solid red;
+}
+.partialCompleted{
+  /* text-decoration: wavy; */
+  color: orange;
+  padding: 2%;
+  border: 5px solid orange;
+}
+.normalText{
+  font-size: 2rem;
+  text-decoration: none !important;
+  color: black;
+  padding: 0%;
+  border: none;
+}
+label.normalText{
+  font-size: 0.9rem;
+  text-align: center;
+  text-justify: center;
+  text-decoration: none !important;
+  color: black;
+  padding: 0%;
+  border: none;
+}
+.rainbowText{
+  font-size: 2rem;
+  /* text-decoration: none !important; */
+  padding: 0%;
+  /* border: none; */
+}
+.statusBox{
+  width: 20%;
+}
+
+/* Glass card effect */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url('../images/Beach.png'); */
+  /* background-color: rgb(231, 221, 172); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.card {
+  padding: 5%;
+  box-shadow: 0 0 5px 0 ;
+  /* background: inherit; */
+  background-color: rgba(255, 252, 255, 0.9);
+
+  backdrop-filter: blur(10px);
+  /* <!--margin: 100px; according to your need--> */
+}
+
+/* general stuff */
+
+#loging-signup{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+#logout-revoke{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.outer {
+  width: 80%;
+}
+.window{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.innerWindow{
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+  border: none;
+}
+.buttonStack{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.buttonStack *{
+  margin: 0.5%;
+}
+div.card.card-body{
+  width: 90% !important;
+}
+.container {
+  /* display: flex; */
+  width: 100%;
+  margin: 0%;
+}
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.per80{
+  width: 100%;
+  margin-bottom: 5%;
+
+}
+main section{
+  margin: 0%;
+}
+main p{
+  width: 80%;
+}
+main *{
+  margin-bottom: 4%;
+}
+.innerWindow{
+  /* display: flex; */
+ text-align: center;
+  width: 100%;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+}
+
+:hover::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: grey;
+  opacity: 1; /* Firefox */
+}
+
+:hover::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: grey;
+}
+
+:hover::-ms-input-placeholder { /* Microsoft Edge */
+  color: grey;
+}
+#glowStick,  #cookie-banner{
+  box-shadow: 0px 0px 30px #fff;
+}
+#zazz{
+  padding: 3%;
+  border: 5px solid black;
+  font-size: 3rem;
+  font-weight: 600;
+  /* background-image: linear-gradient(to left, black, yellow, black, yellow, black); */
+  /* background-image: conic-gradient(
+    #070707 0%, #515151 33%, #000000 33%, #eed72b 66%, #000000 66%, #ffffff 99%
+  );;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text; */
+  text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+               3px 4px 4px rgba(179, 147, 211, 0.15),
+               4px 6px 4px rgba(179, 147, 211, 0.2),
+               5px 8px 4px rgab(179, 147, 211, 0.25);
+  box-shadow: 0px 0px 20px #000;
+
+}
+#zazz2, #close{
+  box-shadow: 0px 0px 20px #000;
+  padding: 3%;
 }
