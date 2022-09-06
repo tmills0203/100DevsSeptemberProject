@@ -46,5 +46,6 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 - Theresa Mills
 - Daniel Becker
+- Hanan Shoubaki
 
 Have fun!
