@@ -2,7 +2,6 @@
 
 100Devs Group Project September 2022
 
-
 ---
 
 # Objectives
@@ -11,17 +10,19 @@
 
 ---
 
-# Who is this for? 
+# Who is this for?
 
 - Anyone who wants to use it I guess
+
 ---
 
 # Notes:
 
 - This is currently hosted on glitch, for free, so some of the stuff is gonna run really slow. Download a copy and set it up to run on localhost and it sings!
+
 ---
 
-# Packages/Dependencies used 
+# Packages/Dependencies used
 
 bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
 
@@ -29,18 +30,20 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # Install all the dependencies or node packages used for development via Terminal
 
-`npm install` 
+`npm install`
 
 ---
 
 # Things to add
 
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
+- Create a `.env` file and add the following as `key: value`
+  - PORT: 2121 (can be any port example: 3000)
   - DB_STRING: `your database URI` || 'local host database url fir localhost testing'
   - SECRET: 'your secret'
- ---
- 
- Have fun! 
+  ***
 
+# Contributors
 
+- Theresa Mills
+
+Have fun!
